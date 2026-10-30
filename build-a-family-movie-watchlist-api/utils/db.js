@@ -7,6 +7,12 @@ const WATCHLISTS_PATH = path.join(
   "../data/watchlists.json",
 );
 
+const USERS_PATH = path.join(import.meta.dirname, "../data/users.json");
+
+export function readUsers() {
+    return JSON.parse(fs.readFileSync(USERS_PATH, "utf-8"));
+}
+
 export function readWatchlists() {
   return JSON.parse(fs.readFileSync(WATCHLISTS_PATH, "utf-8"));
 }
